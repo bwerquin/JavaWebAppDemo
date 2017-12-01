@@ -19,5 +19,5 @@ before_script:
 
 script:
 - mvn test
-- mvn clean cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
+- bash scripts/coveralls.sh
 - mvn failsafe:integration-test

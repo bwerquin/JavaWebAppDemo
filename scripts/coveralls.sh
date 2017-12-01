@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#title           :coverealls.sh
-#description     :This script submits coverage reports to coveralls.io
+#title           : coverealls.sh
+#description     : This script submits coverage reports to coveralls.io
 #author		     : bwerquin
 #==============================================================================
+
 
 if [ -n "$COVERALLS_TOKEN" ];then
   mvn -DrepoToken=$COVERALLS_TOKEN coveralls:report
@@ -10,5 +11,6 @@ if [ -n "$COVERALLS_TOKEN" ];then
 fi
 
 echo "Coveralls token is not set, coverage reports won't be published"
+
 
 
