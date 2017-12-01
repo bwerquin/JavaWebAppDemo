@@ -19,5 +19,5 @@ before_script:
 
 script:
 - mvn test
-- mvn -DrepoToken=4cRks8tZLHztITFweWX4dVz8HyISnSBdz coveralls:report
+- mvn clean cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
 - mvn failsafe:integration-test
