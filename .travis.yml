@@ -19,5 +19,5 @@ before_script:
 
 script:
 - mvn test
-- mvn coveralls:report
+- mvn -DrepoToken=4cRks8tZLHztITFweWX4dVz8HyISnSBdz coveralls:report
 - mvn failsafe:integration-test
