@@ -3,8 +3,6 @@ package fr.insee.demo.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.codehaus.groovy.transform.NewifyASTTransformation;
-
 public class Discussion {
 
 	private List<HelloWorld> messages;
