@@ -4,7 +4,7 @@ services:
   pogues-bo:
     build: ./tomcat
     volumes:
-      - "./tomcat/javaApi.war:/usr/local/tomcat/webapps/javaApi.war"
+      - "./tomcat/javaWebApp.war:/usr/local/tomcat/webapps/javaWebApp.war"
     networks:
       - back
     ports:
