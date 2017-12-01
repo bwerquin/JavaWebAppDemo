@@ -19,5 +19,5 @@ before_script:
 
 script:
 - mvn test
-- bash scripts/coveralls.sh
+- mvn coveralls:report
 - mvn failsafe:integration-test
