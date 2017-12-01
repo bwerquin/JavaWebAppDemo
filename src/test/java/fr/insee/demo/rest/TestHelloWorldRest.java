@@ -24,4 +24,19 @@ public class TestHelloWorldRest {
         assertEquals(message, "Hey !");
     }
 
+    
+    @Test
+    public void get404() {
+        
+        // Trying to reach http://localhost:8080/javaApi/api/wrong-url with Status = 404
+       expect()
+                .statusCode(404)
+                .contentType(MediaType.TEXT_HTML)
+                .when()
+                .get("/javaApi/api/wrong-url")
+                .body()
+                .asString();
+       
+    }
+    
 }
