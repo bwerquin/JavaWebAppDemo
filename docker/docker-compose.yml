@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  pogues-bo:
+    build: ./tomcat
+    volumes:
+      - "./tomcat/javaApi.war:/usr/local/tomcat/webapps/javaApi.war"
+    networks:
+      - back
+    ports:
+      - "8080:8080"
+networks:
+  back:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16

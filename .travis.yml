@@ -1,0 +1,22 @@
+language: java
+jdk:
+- oraclejdk8
+sudo: required
+services:
+- docker
+env:
+- DOCKER_COMPOSE_VERSION=1.9.0
+
+install:
+- bash scripts/build.sh javaWebApp
+- cp target/javaWebApp.war docker/tomcat/
+
+before_script:
+- sudo sysctl -w vm.max_map_count=262144
+- pushd docker
+- docker-compose up -d --build
+- popd
+
+script:
+- mvn test
+- mvn failsafe:integration-test
