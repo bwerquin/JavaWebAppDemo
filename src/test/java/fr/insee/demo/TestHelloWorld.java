@@ -13,5 +13,11 @@ public class TestHelloWorld {
 		HelloWorld hello = new HelloWorld("Hey !");
 		Assert.assertEquals(hello.getMessage(),"Hey !");
 	}
+	
+	@Test
+	public void assertNotNullMessage() {
+		HelloWorld hello = new HelloWorld("Hey !");
+		Assert.assertNotNull(hello.getMessage());
+	}
 
 }
