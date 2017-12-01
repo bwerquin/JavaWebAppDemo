@@ -29,4 +29,15 @@ public class Messaging {
 		return hello.getMessage();
 	}
 	
+	@GET
+	@Path("discussion")
+	@Produces(MediaType.TEXT_HTML)
+	@ApiOperation(value = "Get discussion", notes = "Get simple conversation")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
+			@ApiResponse(code = 500, message = "Unexpected error") })
+	public String getConversation() throws Exception {
+		HelloWorld hello = new HelloWorld("Hey !");
+		return hello.getMessage();
+	}
+	
 }
